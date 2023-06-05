@@ -1,5 +1,6 @@
 import { Box, GridItem, Text, VStack, Grid } from "@chakra-ui/react";
 import Layout from "./layout";
+import { Link } from "react-router-dom";
 
 const dataTour = [
     {
@@ -96,26 +97,28 @@ export default function Home() {
                                         backgroundPosition="center center"
                                         position={"relative"}
                                     >
-                                        <Box position="absolute"
-                                            top={0}
-                                            left={0}
-                                            w="full"
-                                            h="full"
-                                            bgGradient={"linear(to-b, rgba(255,255,255,0.1), rgba(255,255,255,0.9))"}>
-                                            <Text
+                                        <Link to="/detail">
+                                            <Box position="absolute"
+                                                top={0}
+                                                left={0}
                                                 w="full"
-                                                align="center"
-                                                position="absolute"
-                                                top="50%"
-                                                left="50%"
-                                                transform={"translate(-50%, -50%)"}
-                                                fontWeight={900}
-                                                fontSize="20"
-                                                color="red.600"
-                                            >
-                                                {item.text}
-                                            </Text>
-                                        </Box>
+                                                h="full"
+                                                bgGradient={"linear(to-b, rgba(255,255,255,0.1), rgba(255,255,255,0.9))"}>
+                                                <Text
+                                                    w="full"
+                                                    align="center"
+                                                    position="absolute"
+                                                    top="50%"
+                                                    left="50%"
+                                                    transform={"translate(-50%, -50%)"}
+                                                    fontWeight={900}
+                                                    fontSize="20"
+                                                    color="red.600"
+                                                >
+                                                    {item.text}
+                                                </Text>
+                                            </Box>
+                                        </Link>
                                     </GridItem>
                                 ))}
                     </Grid>
